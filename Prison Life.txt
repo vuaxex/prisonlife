@@ -1,0 +1,465 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local owlhubsexyaf = Instance.new("ScreenGui")
+local circle = Instance.new("ImageLabel")
+local logo = Instance.new("ImageLabel")
+local uwu = Instance.new("TextLabel")
+
+--Properties:
+
+owlhubsexyaf.Name = "owlhubsexyaf"
+owlhubsexyaf.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+
+circle.Name = "circle"
+circle.Parent = owlhubsexyaf
+circle.AnchorPoint = Vector2.new(0.5, 0.5)
+circle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+circle.BackgroundTransparency = 1.000
+circle.ClipsDescendants = true
+circle.Position = UDim2.new(0.5, 0, 0.5, 0)
+circle.Image = "rbxassetid://200182847"
+circle.ImageColor3 = Color3.fromRGB(18, 18, 18)
+
+logo.Name = "logo"
+logo.Parent = circle
+logo.AnchorPoint = Vector2.new(0.5, 0.5)
+logo.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+logo.BackgroundTransparency = 1.000
+logo.ClipsDescendants = true
+logo.Position = UDim2.new(0.5, 0, 0.5, 0)
+logo.Size = UDim2.new(0, 150, 0, 150)
+logo.ZIndex = 2
+logo.Image = "http://www.roblox.com/asset/?id=4711644647"
+
+uwu.Name = "uwu"
+uwu.Parent = circle
+uwu.AnchorPoint = Vector2.new(0.5, 1)
+uwu.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+uwu.BackgroundTransparency = 1.000
+uwu.Position = UDim2.new(0.5, 0, 0.912, 0)
+uwu.Size = UDim2.new(0, 105, 0, 28)
+uwu.Text = "DeadHub"
+uwu.TextColor3 = Color3.fromRGB(255, 255, 255)
+uwu.TextSize = 14.000
+
+-- Scripts:
+
+local function JFJJJ_fake_script() -- uwu.LocalScript 
+	local script = Instance.new('LocalScript', uwu)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+	
+	counter = 0
+	
+	while wait(0.1)do
+	 script.Parent.TextColor3 = Color3.fromHSV(zigzag(counter),1,1)
+	 
+	 counter = counter + 0.01
+	end
+end
+coroutine.wrap(JFJJJ_fake_script)()
+local function FYJYZ_fake_script() -- owlhubsexyaf.LocalScript 
+	local script = Instance.new('LocalScript', owlhubsexyaf)
+
+	local owo = script.Parent.circle
+	
+	if game:GetService("RunService"):IsStudio() then repeat wait() until game:IsLoaded() else print('free sex') end
+	wait(1)
+	owo:TweenPosition(UDim2.new(0.5,0,0.5,0),Enum.EasingDirection.In,Enum.EasingStyle.Linear,.7,false,function()
+		owo:TweenSize(UDim2.new(0,250,0,250),Enum.EasingDirection.In,Enum.EasingStyle.Linear,.7,false,function() 
+			wait(3)
+			owo:TweenSize(UDim2.new(0,0,0,0),Enum.EasingDirection.In,Enum.EasingStyle.Linear,.7,false,function()
+				print("yes")
+			end)
+		end)
+	end)
+end
+coroutine.wrap(FYJYZ_fake_script)()
+
+
+
+game.StarterGui:SetCore("SendNotification", {
+Title = "Welcome "..game.Players.LocalPlayer.Name; -- the title (ofc)
+Text = "Thanks for using DeadHub."; -- what the text says (ofc)
+Duration = 5; -- how long the notification should in secounds
+})
+wait(6)
+game.StarterGui:SetCore("SendNotification", {
+Title = "Loaded"; -- the title (ofc)
+Text = ""; -- what the text says (ofc)
+Duration = 5; -- how long the notification should in secounds
+})
+
+
+
+
+local library = loadstring(game:HttpGet("https://pastebin.com/raw/eWKgbdix", true))()
+local w = library:CreateWindow('Local Player')
+w:Section('Local Player')
+local old = workspace.CurrentCamera.FieldOfView
+local s = w:Slider("FOV", {
+   min = math.floor(workspace.CurrentCamera.FieldOfView);
+   max = 120;
+   flag = 'fov'
+}, function(v)
+   workspace.CurrentCamera.FieldOfView = v;
+end)
+local b2 = w:Button('Reset FOV', function()
+   s:Set(old)
+end)
+
+local box = w:Box('WalkSpeed', {
+   flag = "ws";
+   type = 'number';
+}, function(new, old, enter)
+   print(new, old, enter)
+   game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = tonumber(new)
+end)
+local b2 = w:Button('Reset WalkSpeed', function()
+   game:GetService("Players").LocalPlayer.Character.Humanoid.WalkSpeed = 16
+end)
+
+local box = w:Box('JumpPower', {
+   flag = "ws";
+   type = 'number';
+}, function(new, old, enter)
+   print(new, old, enter)
+   game.Players.LocalPlayer.Character.Humanoid.JumpPower = tonumber(new)
+end)
+local b2 = w:Button('Reset JumpPower', function()
+   game:GetService("Players").LocalPlayer.Character.Humanoid.JumpPower = 50
+end)
+
+local w = library:CreateWindow('DeadHub Scripts')
+w:Section("Some Epic Scripts")
+
+local b = w:Button("Kill All", function()
+
+game.StarterGui:SetCore('SendNotification', {
+Title = 'Killing All';
+Text = "this script was not made by vuax :D";
+Duration = 5;
+   })
+ 
+ 
+workspace.Remote.TeamEvent:FireServer("Medium stone grey")
+ 
+game.Workspace.Remote.ItemHandler:InvokeServer(workspace.Prison_ITEMS.giver["Remington 870"].ITEMPICKUP)  
+ 
+wait(0.5)
+function kill(a)
+local A_1 =
+{
+[1] =
+{
+["RayObject"] = Ray.new(Vector3.new(845.555908, 101.429337, 2269.43945), Vector3.new(-391.152252, 8.65560055, -83.2166901)),
+["Distance"] = 3.2524313926697,
+["Cframe"] = CFrame.new(840.310791, 101.334137, 2267.87988, 0.0636406094, 0.151434347, -0.986416459, 0, 0.988420188, 0.151741937, 0.997972965, -0.00965694897, 0.0629036576),
+["Hit"] = a.Character.Head
+},
+   [2] =
+{
+["RayObject"] = Ray.new(Vector3.new(845.555908, 101.429337, 2269.43945), Vector3.new(-392.481476, -8.44939327, -76.7261353)),
+["Distance"] = 3.2699294090271,
+["Cframe"] = CFrame.new(840.290466, 101.184189, 2267.93506, 0.0964837447, 0.0589403138, -0.993587971, 4.65661287e-10, 0.998245299, 0.0592165813, 0.995334625, -0.00571343815, 0.0963144377),
+["Hit"] = a.Character.Head
+},
+[3] =
+{
+["RayObject"] = Ray.new(Vector3.new(845.555908, 101.429337, 2269.43945), Vector3.new(-389.21701, -2.50536323, -92.2163162)),
+["Distance"] = 3.1665518283844,
+["Cframe"] = CFrame.new(840.338867, 101.236496, 2267.80371, 0.0166504811, 0.0941716284, -0.995416701, 1.16415322e-10, 0.995554805, 0.0941846818, 0.999861419, -0.00156822044, 0.0165764652),
+["Hit"] = a.Character.Head
+},
+[4] =
+{
+["RayObject"] = Ray.new(Vector3.new(845.555908, 101.429337, 2269.43945), Vector3.new(-393.353973, 3.13988972, -72.5452042)),
+["Distance"] = 3.3218522071838,
+["Cframe"] = CFrame.new(840.277222, 101.285957, 2267.9707, 0.117109694, 0.118740402, -0.985994935, -1.86264515e-09, 0.992826641, 0.119563118, 0.993119001, -0.0140019981, 0.116269611),
+["Hit"] = a.Character.Head
+},
+[5] =
+{
+["RayObject"] = Ray.new(Vector3.new(845.555908, 101.429337, 2269.43945), Vector3.new(-390.73172, 3.2097764, -85.5477524)),
+["Distance"] = 3.222757101059,
+["Cframe"] = CFrame.new(840.317993, 101.286423, 2267.86035, 0.0517584644, 0.123365127, -0.991010666, 0, 0.992340803, 0.123530701, 0.99865967, -0.00639375951, 0.0513620302),
+["Hit"] = a.Character.Head
+}
+}
+local A_2 = game.Players.LocalPlayer.Backpack["Remington 870"]
+local Event = game:GetService("ReplicatedStorage").ShootEvent
+Event:FireServer(A_1, A_2)
+Event:FireServer(A_1, A_2)
+end
+ 
+for i,v in pairs(game.Players:GetChildren())do
+if v.Name ~= game.Players.LocalPlayer.Name then
+kill(v)
+end
+end
+wait(1)
+end)
+
+local b = w:Button("Kill Aura", function()
+   game.StarterGui:SetCore('SendNotification', {
+Title = 'Loading... Kill Aura';
+Text = "Press K to Enable/Disable";
+Duration = 5;
+   })
+
+mainRemotes = game.ReplicatedStorage
+meleeRemote = mainRemotes['meleeEvent']
+
+killAura = true
+
+contextactionservice = game.ContextActionService
+
+function toggleKillAura(actionName, inputState, inputObject)
+print('Doing the action : ' .. actionName)
+if inputState == Enum.UserInputState.Begin then
+if killAura == true then
+killAura = false
+else
+killAura = true
+end
+end
+end
+
+contextactionservice:BindAction('ToggleKillAura', toggleKillAura, false, Enum.KeyCode.K)
+
+while wait() do
+if killAura == true then
+for _, plr in pairs (game:GetService('Players'):GetChildren()) do
+if plr.Name ~= game.Players.LocalPlayer.Name then
+meleeRemote:FireServer(plr)
+end
+end
+end
+end
+end)
+
+local b = w:Button("Bypass Taser", function()
+    game.StarterGui:SetCore('SendNotification', {
+Title = 'Bypassing Taser';
+Text = "wait plez";
+Duration = 5;
+   })
+wait(6)
+    game.StarterGui:SetCore('SendNotification', {
+Title = 'Bypassed Taser';
+Text = "enjoy bois";
+Duration = 5;
+   })
+
+game.Players.LocalPlayer.Character.ClientInputHandler.Disabled = true
+game.Players.LocalPlayer.CharacterAdded:connect(function()
+game.Workspace:WaitForChild(game.Players.LocalPlayer.Name)
+game.Players.LocalPlayer.Character.ClientInputHandler.Disabled = true
+end)
+end)
+
+w:Section('Even More Scripts')
+
+local b = w:Button("Gun Mods", function()
+    game.StarterGui:SetCore('SendNotification', {
+Title = 'Importing Gun Scripts';
+Text = "sorry for using 'fancy' words";
+Duration = 5;
+   })
+while wait(1) do
+for i,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+if v:FindFirstChild("GunStates") then
+local a =  require(v.GunStates)
+a.Spread = 0
+a.FireRate = 0
+a.MaxAmmo = math.huge
+a.Damage = math.huge
+a.ReloadTime = 0
+a.Range = math.huge
+a.Bullets = math.huge
+a.StoredAmmo = math.huge
+else
+return v
+end
+end
+end
+end)
+
+local b = w:Button("Give Guns", function()
+game.StarterGui:SetCore('SendNotification', {
+Title = 'Giving Guns';
+Text = "this gui makes me go yes";
+Duration = 5;
+   })
+wait(6)
+local weapons = {"Remington 870", "M9", "AK-47", "M4A1", "Riot Shield"}
+ for i, v in pairs(game.Workspace["Prison_ITEMS"].giver:GetChildren()) do
+ for j, k in pairs(weapons) do
+ if v.Name == k then
+ v:MoveTo(game.Players.LocalPlayer.Character.Torso.Position)
+ end
+ end
+ end
+end)
+
+local b w:Button("Give Melee", function()
+game.StarterGui:SetCore('SendNotification', {
+Title = 'Giving Melees';
+Text = "plez wait for this 2";
+Duration = 5;
+   })
+local weapons = {"Crude Knife", "Sharpened stick", "Extendo mirror"}
+ for i, v in pairs(game.ReplicatedStorage.Tools:GetChildren()) do
+ for j, k in pairs(weapons) do
+ if v.Name == k then
+ v:Clone().Parent = game.Players.LocalPlayer.Backpack
+ end
+ end
+ end
+end)
+
+
+local b = w:Button("NoClip", function()
+game.StarterGui:SetCore('SendNotification', {
+Title = 'NoCliping';
+Text = "Press E to noclip";
+Duration = 5;
+   })
+
+noclip = false
+game:GetService('RunService').Stepped:connect(function()
+if noclip then
+game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+end
+end)
+plr = game.Players.LocalPlayer
+mouse = plr:GetMouse()
+mouse.KeyDown:connect(function(key)
+
+if key == "e" then
+noclip = not noclip
+game.Players.LocalPlayer.Character.Humanoid:ChangeState(11)
+end
+end)
+print('Loaded')
+print('Press "E" to noclip')
+end)
+
+local b = w:Button("Remove Doors", function()
+game.StarterGui:SetCore('SendNotification', {
+Title = 'Removing Doors';
+Text = "wait plez";
+Duration = 4;
+   })
+wait(5)
+    game.StarterGui:SetCore('SendNotification', {
+Title = 'Removed Doors';
+Text = "enjoy bois";
+Duration = 3;
+   })
+wait(3)
+game.Workspace.Doors:Destroy()
+end)
+
+local b = w:Button("Auto Arrest", function()
+game.StarterGui:SetCore('SendNotification', {
+Title = 'Auto Arrest Script';
+Text = "Script by Tatical BFG";
+Duration = 5;
+   })
+orkspace.Remote.TeamEvent:FireServer("Bright blue") -- place on police team
+for i,v in pairs(game.Players:GetPlayers()) do
+if v.Team == game.Teams.Criminals then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame * CFrame.new(0,0,-1)
+local character = game.Workspace[v.Name].Torso -- idk why but u have to do this
+workspace.Remote.arrest:InvokeServer(character)
+wait()
+end
+end
+
+for i,v in pairs(game.Players:GetPlayers()) do
+if v.Team == game.Teams.Inmates and v.Backpack:FindFirstChild("Remington 870") then
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.Character.HumanoidRootPart.CFrame * CFrame.new(0,0,-1)
+local character = game.Workspace[v.Name].Torso -- idk why but u have to do this
+workspace.Remote.arrest:InvokeServer(character)
+wait()
+end
+end
+end)
+
+local w = library:CreateWindow('Teleports')
+w:Section('Some Teleports')
+
+local b = w:Button("Outside", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(288.452, 69.999, 2206.731)
+end)
+
+local b = w:Button("Criminal Base", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-943.704, 91.632, 2056.925)
+end)
+
+local b = w:Button("Yard", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(779.092, 96.001, 2451.114)
+end)
+
+local b = w:Button("Caferteria", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(930, 97.54, 2291)
+end)
+
+local b = w:Button("Cells", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(918, 97.73, 2447)
+end)
+
+local b = w:Button("Secret", function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(697, 97.492, 2364)
+end)
+
+local w = library:CreateWindow('Team Swapper')
+w:Section('Team Swapper')
+local b = w:Button("Join Guards", function()
+workspace.Remote.TeamEvent:FireServer("Bright blue")
+end)
+
+local b = w:Button("Join Inmates", function()
+Workspace.Remote.TeamEvent:FireServer("Bright orange")
+end)
+
+local w = library:CreateWindow('Extras')
+w:Section('Extras')
+local b = w:Button("Sword {Leaked}", function()
+local plr=game.Players.LocalPlayer;local tool=Instance.new("Tool",plr.Backpack)tool.GripPos=Vector3.new(0.1,-1,0)tool.Name="Sword"local k=Instance.new("Part",tool)k.Name="Handle"k.Size=Vector3.new(0.4,4,0.4)local l=Instance.new("Animation",tool)l.AnimationId="rbxassetid://218504594"local m=plr.Character.Humanoid:LoadAnimation(l)db=true;da=false;tool.Equipped:connect(function()tool.Activated:connect(function()if db==true then db=false;m:Play()wait()da=true;db=true;wait(0.1)da=false end end)end)k.Touched:connect(function(n)if da==true then local o=n.Parent.Humanoid;if o~=nil then local p=game.Players:FindFirstChild(n.Parent.Name)for j=1,10 do if p.Name~="FunnyVideo15"then game.ReplicatedStorage.meleeEvent:FireServer(p)end end end end end)
+end)
+
+w:Bind("Kill Player", {
+   flag = "killbind";
+   kbonly = true;
+   default = Enum.KeyCode.RightAlt;
+}, function()
+   game.Players.LocalPlayer.Character:BreakJoints()
+end)
+
+local b = w:Button("Kick Yourself", function()
+Workspace.Remote.TeamEvent:FireServer("Bright Red")
+end)
+
+local b = w:Button("Hentai", function()
+game.StarterGui:SetCore('SendNotification', {
+Title = 'Horny kid';
+Text = "This script was made by autist69420";
+Duration = 5;
+   })
+
+local ExSecure = loadstring(game:HttpGet("https://pastebin.com/raw/kxPBzk3L", true))()
+ExSecure:RunSecure("c627c3aa36f9b3e53619eceed03f9ac4e1961c2cd802f87f510fb7df22afeabf1f4d2666c9c235d595b525a56a99b1bf0df93825d3e523db4fef56718dc07f1e7a2448b79aa1ac4f12abddfd69486176b324e13bd2eebeffd8349c27a71290cd7e98c0a0aad075cf18096c51f65402e2a9b8fe3c052e764d58896a9f676cc4bd77282a7e5c6d5d3e1cac5fed3923d6fd529705efa19dbbdff5df34a1e862e8ab4347f11f6bbc8089e8a218883f36d258c305a81c56104ecb0a70c5755358023777fa0fa9d18b585c9b9e989fe62e6ab892f11e265a7e0faefb876e5373979210776b6d7dc46dacdf7f37cda18dc3eeb768bb5cdb8855b782bc5e48602111053215bb6a65c55c01f2d27c78aa52a66f062f12f076f92e6a8521874db9e31579a470e606e50cf19076a179965f4672e954f228ea184085db837d418156dab66dd905e0fc0d488f6828406f16c0e19bb7ab2bf22db6c73212437d3603a6cae1fd6aa7f2d6480ba04d2b0af79c3de57d80a7a3aa47a9f93bd45b120d82604a3733e91ef448036f2dd73551e52645628cf84add98bc819c66e1be365f23c6d29554db9bfbfb9d6cd41a30ec9a7b652ff5c43c00f4f0ae480e5bfc32a5325a8a66788659db36dbfb85268a9dbe547a0bee0531d16fb8ff20e67056e0d278ff8a31b92745e3e5e30c5f3c86332192e705a28c5674079e8dd3b9306654009510ba8f4b06c65777eb48f2518ca051a2a50fc5924b29fd612885aa7a2557414d0db6e088d234d58d249b5a3dd26fafcf188d52a23fe547a881ea8b8d698a1940ee3c32e786a52c891bf0d019fda3375d2c4775101ac96676fd1bb35d23add115356679d894bd08829ca238e8f64acc2514ffe2b521ea4bd5c0653ea4ea01f04f26526fb92b93d6a46a87adc77b6a6940b564fd382ff5175a1543aa0a5ce39154e319f633d397787b9aca570fef1aec0442ad3ab0bb0fd45cbda8956cfca8ca5a3444a07a2a2555f2ead58504998ce6b16c6425a903815a15ffd651d1e835b634d4d42a2e73b45bee3ad6cda8ca663e9b8edcb788d8f59a2243955fd90c80623d65d4e0f5400c631e3e070fbff1dcd1bc914effd8378dab74ef91d1d0af54cf259225a45ffe8fb2d9d282502a6c7214a22b21388565d9a2c0950062455292e6566fa33eee9136720411bfcf5d536c56491f")
+end)
+
+
+local w = library:CreateWindow('Credits')
+w:Section('UI - Wally')
+w:Section('Dev - ReaperFrench')
+w:Section('Scripts - ReaperFrench And Vuax')
+w:Section('Owner - Vuax')
+w:Section('Obf - Sovw')
