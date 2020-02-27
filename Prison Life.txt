@@ -460,8 +460,8 @@ end)
 
 
 local w = library:CreateWindow('Credits')
-w:Section('UI - Wally')
-w:Section('Dev - ReaperFrench')
-w:Section('Scripts - ReaperFrench And Vuax')
-w:Section('Owner - Vuax')
-w:Section('Obf - Sovw')
+w:Label("UI - Wally")
+w:Label("Helper - ReaperFrench")
+w:Label("Scripts - SelfMade/V3RM")
+w:Label("Obf - Sovw")
+w:Label("DeadHub - Vuax")
